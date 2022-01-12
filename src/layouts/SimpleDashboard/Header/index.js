@@ -8,7 +8,7 @@ import UpgradeButton from "./UpgradeButton";
 export default function index() {
   return (
     <>
-      <div className="flex px-6 items-center border-b-[1px] justify-between">
+      <div className="flex px-6 items-center justify-between">
         {/* Logo */}
         <div className="px-4">
           <LogoText />

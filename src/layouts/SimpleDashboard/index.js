@@ -7,9 +7,14 @@ export default function SimpleDashboardLayout({ children }) {
   return (
     <>
       <div>
-        <Header />
+        <div className="border-b-[1px]">
+          <div className="container">
+            <Header />
+          </div>
+        </div>
+        <div className="bg-dashboard"></div>
+        <div>{children}</div>
       </div>
-      <div>{children}</div>
     </>
   );
 }

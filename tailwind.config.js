@@ -8,6 +8,7 @@ module.exports = {
         "velstand-black": "#353945",
         "light-green": "#6BBC8A",
         "dark-green-bg": "#070c09",
+        dashboard: "#FAFAFB",
       },
       zIndex: {
         "-10": "-10",
@@ -54,9 +55,9 @@ module.exports = {
       center: true,
       padding: "1rem",
       screens: {
-        lg: "1224px",
-        xl: "1224px",
-        "2xl": "1224px",
+        lg: "1324px",
+        xl: "1324px",
+        "2xl": "1324px",
       },
     },
   },
