@@ -2,10 +2,11 @@ import React from "react";
 import BalanceCard from "./BalanceCard";
 import Greeting from "./Greeting";
 import VisaCredit from "./VisaCredit";
+import YourAssets from "./YourAssets";
 
 export default function Overview() {
   return (
-    <div className="bg-dashboard">
+    <div className="bg-dashboard pb-24">
       <div className="container py-8 pl-20 pr-12">
         <div>
           <Greeting />
@@ -65,7 +66,9 @@ export default function Overview() {
             </div>
           </div>
           {/* Right */}
-          <div className="flex flex-1 flex-col mt-8">Your Assets</div>
+          <div className="flex flex-1 flex-col mt-8">
+            <YourAssets />
+          </div>
         </div>
       </div>
     </div>

@@ -1,17 +1,32 @@
-import React from "react";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import React, { useState } from "react";
+import clsx from "clsx";
 import visa from "src/assets/images/visa-logo.png";
 import mastercard from "src/assets/images/mc-logo.png";
 
 export default function VisaCredit({ title, amount, percent, previous }) {
+  const [cardType, setCardType] = useState("visa");
   return (
     <>
       {/* Debit Card 1 */}
       <div className="bg-white rounded-xl px-2 py-6 w-full">
         <div className="pr-12 pl-6 flex gap-4">
           {/* Selector */}
-          <div className="w-[25px] h-[25px] rounded-full border-[1px] border-velstand-primary flex items-center justify-center">
-            <div className="w-[12px] mr-[1px]z h-[12px] rounded-full bg-velstand-primary"></div>
+          <div
+            className={clsx({
+              "w-[25px] h-[25px] rounded-full border-[1px] border-velstand-primary flex items-center justify-center cursor-pointer":
+                cardType === "visa",
+              "w-[25px] h-[25px] rounded-full border-[1px]  flex items-center justify-center cursor-pointer":
+                cardType === "mastercard",
+            })}
+            onClick={() => setCardType("visa")}
+          >
+            <div
+              className={clsx({
+                "w-[12px] mr-[1px]z h-[12px] rounded-full bg-velstand-primary":
+                  cardType === "visa",
+                "cursor-pointer": cardType === "mastercard",
+              })}
+            ></div>
           </div>
           {/* Card Logo */}
           <div className="flex items-center p-1 border-2">
@@ -51,8 +66,22 @@ export default function VisaCredit({ title, amount, percent, previous }) {
       <div className="bg-white rounded-xl px-2 py-6 w-full mt-6">
         <div className="pr-12 pl-6 flex gap-4">
           {/* Selector */}
-          <div className="w-[25px] h-[25px] rounded-full border-[1px] border-velstand-primary flex items-center justify-center">
-            <div className="w-[12px] mr-[1px]z h-[12px] rounded-full bg-velstand-primary"></div>
+          <div
+            className={clsx({
+              "w-[25px] h-[25px] rounded-full border-[1px] border-velstand-primary flex items-center justify-center cursor-pointer":
+                cardType === "mastercard",
+              "w-[25px] h-[25px] rounded-full border-[1px]  flex items-center justify-center cursor-pointer":
+                cardType === "visa",
+            })}
+            onClick={() => setCardType("mastercard")}
+          >
+            <div
+              className={clsx({
+                "w-[12px] mr-[1px]z h-[12px] rounded-full bg-velstand-primary":
+                  cardType === "mastercard",
+                "cursor-pointer": cardType === "visa",
+              })}
+            ></div>
           </div>
           {/* Card Logo */}
           <div className="flex items-center p-1 border-2">

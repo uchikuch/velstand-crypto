@@ -1,0 +1,42 @@
+[
+    {
+        "id": "1",
+        "image": "src/assets/images/token-sm.png",
+        "name": "V Stable",
+        "price": "$50.34",
+        "volume": "$28.43M",
+        "liquidity": "$2.23B"
+    },
+    {
+        "id": "2",
+        "image": "src/assets/images/token-sm.png",
+        "name": "V Stable",
+        "price": "$50.34",
+        "volume": "$28.43M",
+        "liquidity": "$2.23B"
+    },
+    {
+        "id": "3",
+        "image": "src/assets/images/token-sm.png",
+        "name": "V Stable",
+        "price": "$50.34",
+        "volume": "$28.43M",
+        "liquidity": "$2.23B"
+    },
+    {
+        "id": "4",
+        "image": "src/assets/images/token-sm.png",
+        "name": "V Stable",
+        "price": "$50.34",
+        "volume": "$28.43M",
+        "liquidity": "$2.23B"
+    },
+    {
+        "id": "5",
+        "image": "src/assets/images/token-sm.png",
+        "name": "V Stable",
+        "price": "$50.34",
+        "volume": "$28.43M",
+        "liquidity": "$2.23B"
+    }
+]
