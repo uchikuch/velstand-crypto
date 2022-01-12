@@ -5,6 +5,7 @@ module.exports = {
       colors: {
         "velstand-verylight-green": "#e9fff1",
         "velstand-primary": "#063d0d",
+        "velstand-black": "#353945",
         "light-green": "#6BBC8A",
         "dark-green-bg": "#070c09",
       },
@@ -33,6 +34,21 @@ module.exports = {
     },
     fontFamily: {
       cairo: ["Cairo", "sans-serif"],
+    },
+    fontSize: {
+      xxs: ".60rem",
+      xs: ".75rem",
+      sm: ".875rem",
+      tiny: ".875rem",
+      base: "1rem",
+      lg: "1.125rem",
+      xl: "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "4rem",
+      "7xl": "5rem",
     },
     container: {
       center: true,
