@@ -3,7 +3,7 @@ import { AiOutlineArrowUp } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import clsx from "clsx";
 
-export default function Balancecard({ title, amount, percent, previous }) {
+export default function OverviewCard({ title, amount, percent, previous }) {
   const [direction, setDirection] = useState(null);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Balancecard({ title, amount, percent, previous }) {
   }, [percent]);
 
   return (
-    <div className="bg-white rounded-xl px-2 py-6 w-full">
+    <div className="bg-white rounded-xl px-2 py-6 w-full hover:shadow-lg">
       <div className="px-6 flex flex-col gap-1">
         <p className="text-lg">{title}</p>
         <div className="flex items-center">

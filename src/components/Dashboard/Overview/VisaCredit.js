@@ -8,7 +8,10 @@ export default function VisaCredit({ title, amount, percent, previous }) {
   return (
     <>
       {/* Debit Card 1 */}
-      <div className="bg-white rounded-xl px-2 py-6 w-full">
+      <div
+        className="bg-white rounded-xl px-2 py-6 w-full hover:shadow-lg cursor-pointer"
+        onClick={() => setCardType("visa")}
+      >
         <div className="pr-12 pl-6 flex gap-4">
           {/* Selector */}
           <div
@@ -63,7 +66,10 @@ export default function VisaCredit({ title, amount, percent, previous }) {
         </div>
       </div>
       {/* Debit Card 2 */}
-      <div className="bg-white rounded-xl px-2 py-6 w-full mt-6">
+      <div
+        className="bg-white rounded-xl px-2 py-6 w-full mt-6 hover:shadow-lg cursor-pointer"
+        onClick={() => setCardType("mastercard")}
+      >
         <div className="pr-12 pl-6 flex gap-4">
           {/* Selector */}
           <div

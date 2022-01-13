@@ -1,6 +1,6 @@
 import React from "react";
-import BalanceCard from "./BalanceCard";
-import Greeting from "./Greeting";
+import OverviewCard from "./OverviewCard";
+import Greeting from "../Greeting";
 import VisaCredit from "./VisaCredit";
 import YourAssets from "./YourAssets";
 
@@ -9,7 +9,7 @@ export default function Overview() {
     <div className="bg-dashboard pb-24">
       <div className="container py-8 pl-20 pr-12">
         <div>
-          <Greeting />
+          <Greeting sub="Hi Nicole," main="Welcome back 👋" />
         </div>
         <div className="flex gap-6">
           {/* left */}
@@ -17,7 +17,7 @@ export default function Overview() {
             {/* Small Cards Top Row */}
             <div className="flex gap-3">
               <div className="flex-grow">
-                <BalanceCard
+                <OverviewCard
                   title="Your earning this month"
                   amount="$1,632"
                   percent="+2.5%"
@@ -25,7 +25,7 @@ export default function Overview() {
                 />
               </div>
               <div className="flex-grow">
-                <BalanceCard
+                <OverviewCard
                   title="Current Balance"
                   amount="$4,398.20"
                   percent="+11.92%"
@@ -36,7 +36,7 @@ export default function Overview() {
             {/* Small Cards Bottom Row */}
             <div className="flex gap-3 mt-6">
               <div className="flex-grow">
-                <BalanceCard
+                <OverviewCard
                   title="Velstand Token"
                   amount="$398.25"
                   percent="+2.2%"
@@ -44,7 +44,7 @@ export default function Overview() {
                 />
               </div>
               <div className="flex-grow">
-                <BalanceCard
+                <OverviewCard
                   title="V Stable Coin"
                   amount="$567"
                   percent="-1.5%"
