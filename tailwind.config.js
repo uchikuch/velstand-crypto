@@ -22,9 +22,9 @@ module.exports = {
       },
       backgroundImage: {
         "overview-pattern": "url('/src/assets/images/overview-bg.png')",
-        login: "url('/src/assets/images/login.png')",
+        signup: "url('/src/assets/images/signup.jpg')",
         "hero-gradient": "url('/src/assets/images/bg.png')",
-        login: "url('/src/assets/images/login-bg.png')",
+        login: "url('/src/assets/images/login.jpg')",
         "about-vector": "url('/src/assets/images/about-vector.svg')",
         spiral: "url('/src/assets/images/spiral.png')",
         mesh: "url('/src/assets/images/mesh.png')",

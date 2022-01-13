@@ -3,7 +3,7 @@ import { FiSettings } from "react-icons/fi";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import SwapCard from "./SwapCard";
 import v_stable from "src/assets/images/v-stable-rounded.png";
-import bitcoin_sm from "src/assets/images/bitcoin-sm.png";
+import velstand from "src/assets/images/velstand-rounded.png";
 
 export default function Exchange() {
   return (
@@ -16,8 +16,8 @@ export default function Exchange() {
           title="From"
           amount="0.00"
           balance="234.3459"
-          coin="Bitcoin"
-          img={bitcoin_sm}
+          coin="Velstand"
+          img={velstand}
         />
       </div>
       <div className="flex justify-around py-4">
@@ -28,7 +28,7 @@ export default function Exchange() {
           title="To (estimated)"
           amount="0.00"
           balance="1.2334"
-          coin="Bitcoin"
+          coin="V Stable"
           img={v_stable}
         />
       </div>

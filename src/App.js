@@ -7,6 +7,7 @@ import Overview from "./components/Dashboard/Overview";
 import Balance from "./components/Dashboard/Balance";
 import Convert from "./components/Dashboard/Convert";
 import Settings from "./components/Dashboard/Settings";
+import Signup from "./components/Authentication/Signup";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Velstand />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/signup" element={<Signup />} />
           <Route
             path="/dashboard"
             element={

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LogoText from "src/components/Logo/LogoText";
 import Menu from "./Menu";
 import Notifications from "./Notifications";
@@ -11,7 +12,9 @@ export default function index() {
       <div className="flex px-6 items-center justify-between">
         {/* Logo */}
         <div className="px-4">
-          <LogoText />
+          <Link to="/">
+            <LogoText />
+          </Link>
         </div>
         {/* Menu */}
         <div className="px-6">

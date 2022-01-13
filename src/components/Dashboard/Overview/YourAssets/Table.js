@@ -1,8 +1,11 @@
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
-import ASSETS_DATA from "src/mock-data/ASSETS_DATA.json";
+import { ASSETS_DATA } from "src/mock-data/ASSETS_DATA.js";
 import { COLUMNS } from "./columns";
-import { HiOutlineExternalLink } from "react-icons/hi";
+import {
+  IoIosArrowDropupCircle,
+  IoIosArrowDropdownCircle,
+} from "react-icons/io";
 
 export default function Table() {
   const columns = useMemo(() => COLUMNS, []);
@@ -38,40 +41,84 @@ export default function Table() {
           return (
             <tr key={row} {...row.getRowProps()}>
               {row.cells.map((cell) =>
-                cell.column.id === "image" ? (
+                cell.column.id === "price" ? (
                   <td
                     key={cell.column.id}
-                    className="py-6 border-t-2 text-velstand-primary flex gap-1.5 items-center cursor-pointer hover:text-green-600"
+                    className="py-6 border-t-[1px] hidden sm:table-cell text-slate-600 pr-4"
                     {...cell.getCellProps()}
                   >
-                    {<img src={cell.render("Cell")} alt="" />}{" "}
+                    {cell.render("Cell")}
                   </td>
-                ) : cell.column.id === "status" ? (
+                ) : cell.column.id === "volume" ? (
                   <td
                     key={cell.column.id}
-                    className="py-6 border-t-2 hidden sm:table-cell"
+                    className="py-6 border-t-[1px] hidden sm:table-cell text-slate-600"
                     {...cell.getCellProps()}
                   >
-                    <p className="bg-green-100 text-green-600 font-bold text-xs py-2 px-4 text-center rounded-2xl mr-4">
-                      <img src="" alt="" />
-                      {cell.render("Cell")}
-                    </p>
+                    {cell.render("Cell")}
+                  </td>
+                ) : cell.column.id === "liquidity" ? (
+                  <td
+                    key={cell.column.id}
+                    className="py-6 border-t-[1px] hidden sm:table-cell text-slate-600"
+                    {...cell.getCellProps()}
+                  >
+                    {cell.render("Cell")}
+                  </td>
+                ) : cell.column.id === "name" ? (
+                  <td
+                    key={cell.column.id}
+                    className="py-6 border-t-[1px] hidden sm:table-cell"
+                    {...cell.getCellProps()}
+                  >
+                    <div className="flex items-center gap-4">
+                      {<img src={cell.row.original.image} width={50} alt="" />}{" "}
+                      <div>
+                        {/* Coin Name */}
+                        <div className="flex gap-1 items-center">
+                          <div>{cell.render("Cell")}</div>
+                          <div className="text-sm text-gray-400">
+                            {cell.row.original.code}
+                          </div>
+                        </div>
+                        {/* Percentage Difference */}
+                        <div className="flex text-sm">
+                          <div>
+                            {cell.row.original.difference.charAt(0) === "+" ? (
+                              <div className="flex gap-1 items-center">
+                                <IoIosArrowDropupCircle className="text-green-600 mt-[1px]" />
+                                <p className="text-green-600">
+                                  {cell.row.original.difference}
+                                </p>
+                              </div>
+                            ) : (
+                              <div className="flex gap-1 items-center">
+                                <IoIosArrowDropdownCircle className="text-red-600 mt-[1px]" />
+                                <p className="text-red-600">
+                                  {cell.row.original.difference}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </td>
                 ) : cell.column.id === "id" ? (
                   <td
                     key={cell.column.id}
-                    className="py-6 border-t-2 pr-6 hidden sm:table-cell"
+                    className="py-6 border-t-[1px] pr-6 hidden sm:table-cell"
                     {...cell.getCellProps()}
                   >
-                    <input
-                      type="checkbox"
-                      className="checked:bg-green-500 cursor-pointer mt-1 h-5 w-5 text-gray-600 hidden sm:inline"
-                    />
+                    <p>
+                      <img src="" alt="" />
+                      {cell.render("Cell")}
+                    </p>
                   </td>
                 ) : (
                   <td
                     key={cell.column.id}
-                    className="py-6 border-t-2 text-sm hidden sm:table-cell"
+                    className="py-6 border-t-[1px] text-sm hidden sm:table-cell"
                     {...cell.getCellProps()}
                   >
                     {cell.render("Cell")}

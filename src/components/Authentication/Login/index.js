@@ -5,19 +5,21 @@ import clsx from "clsx";
 import EmailLogin from "./EmailLogin";
 import MobileLogin from "./MobileLogin";
 
-export default function Index() {
+export default function Login() {
   const [loginType, setLoginType] = useState("email");
   return (
     <>
       <div className="flex h-screen">
         {/* Left Div */}
-        <div className="h-screen bg-velstand-black w-2/5"></div>
+        <div className="h-screen bg-login bg-no-repeat bg-cover w-2/5"></div>
         {/* Right Div */}
         <div className="h-screen flex flex-col items-center justify-center w-3/5">
           {/* Top Account Message */}
           <div className="flex gap-2">
             <p className="text-xs">Don't have an account?</p>
-            <p className="text-light-green text-xs">Sign up for free</p>
+            <Link to="/signup">
+              <p className="text-light-green text-xs">Sign up for free</p>
+            </Link>
           </div>
           {/* Heading */}
           <div className="mt-6 flex gap-2 items-center">

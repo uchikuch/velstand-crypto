@@ -5,7 +5,7 @@ import * as Yup from "yup";
 import { useStateValue } from "src/StateProvider";
 import { useNavigate } from "react-router-dom";
 
-export default function EmailLogin() {
+export default function EmailSignup() {
   const navigate = useNavigate();
   const [{}, dispatch] = useStateValue();
   const [emailError, setEmailError] = useState("");
@@ -75,7 +75,7 @@ export default function EmailLogin() {
           <form noValidate onSubmit={handleSubmit}>
             <div className="mt-4">
               <label className="block uppercase mb-2 text-gray-400 text-xs font-medium">
-                Email Address
+                Email
               </label>
               <input
                 className="block w-full px-4 py-2 text-gray-700 bg-white border-2 rounded-xl focus:border-blue-500 focus:outline-none focus:ring"
@@ -104,25 +104,31 @@ export default function EmailLogin() {
                 value={values.password}
               />
               <p className="text-red-600 text-xs mt-2">{passwordError}</p>
-              <div className="flex justify-between mt-4">
-                <label className="block mb-2 text-gray-500 text-xs font-medium">
-                  Sacn to login
+            </div>
+            <div className="mt-6">
+              <div>
+                <label className="block mb-2 uppercase text-gray-400 text-xs font-medium">
+                  Confirm Password
                 </label>
-                <Link
-                  to="#"
-                  className="text-xs text-light-green hover:underline"
-                >
-                  Forget Password?
-                </Link>
               </div>
+
+              <input
+                className="block w-full px-4 py-2 text-gray-700 bg-white border-2 rounded-xl focus:border-blue-500 focus:outline-none focus:ring"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                type="password"
+                name="password"
+                value={values.password}
+              />
+              <p className="text-red-600 text-xs mt-2">{passwordError}</p>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-10">
               <button
                 type="submit"
                 className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-velstand-primary rounded-2xl hover:bg-velstand-black hover:text-white focus:outline-none focus:bg-mid-green"
               >
-                Login
+                Sign up
               </button>
             </div>
           </form>
