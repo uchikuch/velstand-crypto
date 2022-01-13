@@ -1,6 +1,6 @@
 import React from "react";
 import Lottie from "react-lottie";
-import * as loadingAnimation from "src/assets/animations/loader.json";
+import * as loadingAnimation from "src/assets/animations/four-dots-loading.json";
 
 export default function SplashScreen() {
   const loadingAnimationOptions = {
