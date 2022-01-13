@@ -44,7 +44,7 @@ export default function Table() {
                 cell.column.id === "price" ? (
                   <td
                     key={cell.column.id}
-                    className="py-6 border-t-[1px] hidden sm:table-cell text-slate-600 pr-4"
+                    className="py-6 border-t-[1px] sm:table-cell text-slate-600 pr-4"
                     {...cell.getCellProps()}
                   >
                     {cell.render("Cell")}
@@ -68,7 +68,7 @@ export default function Table() {
                 ) : cell.column.id === "name" ? (
                   <td
                     key={cell.column.id}
-                    className="py-6 border-t-[1px] hidden sm:table-cell"
+                    className="py-6 border-t-[1px] sm:table-cell"
                     {...cell.getCellProps()}
                   >
                     <div className="flex items-center gap-4">

@@ -60,7 +60,7 @@ export default function VisaCredit({ title, amount, percent, previous }) {
             </div>
           </div>
           {/* Expiry */}
-          <div className="ml-4 flex items-center gap-1">
+          <div className="ml-4 hidden sm:flex items-center gap-1">
             <p className="text-gray-400 text-sm">Expires 06/2024</p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function VisaCredit({ title, amount, percent, previous }) {
             </div>
           </div>
           {/* Expiry */}
-          <div className="ml-4 flex items-center gap-1">
+          <div className="ml-4 hidden sm:flex items-center gap-1">
             <p className="text-gray-400 text-sm">Expires 01/2029</p>
           </div>
         </div>

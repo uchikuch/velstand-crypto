@@ -11,9 +11,9 @@ export default function Signup() {
     <>
       <div className="flex h-screen">
         {/* Left Div */}
-        <div className="h-screen bg-signup bg-no-repeat bg-cover w-2/5"></div>
+        <div className="h-screen bg-signup hidden lg:flex bg-no-repeat bg-cover w-2/5"></div>
         {/* Right Div */}
-        <div className="h-screen flex flex-col items-center justify-center w-3/5">
+        <div className="h-screen flex flex-col items-center justify-center w-full lg:w-3/5">
           {/* Top Account Message */}
           <div className="flex gap-2">
             <p className="text-xs">Already have an account?</p>

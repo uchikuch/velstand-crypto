@@ -6,15 +6,15 @@ import VisaCredit from "../Overview/VisaCredit";
 export default function Overview() {
   return (
     <div className="bg-dashboard pb-24">
-      <div className="container py-8 pl-20 pr-12">
+      <div className="container py-8 lg:pl-20 lg:pr-12">
         <div>
           <Greeting sub="Manage your payouts," main="Balance 💰" />
         </div>
-        <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-6">
           {/* left */}
           <div className="flex flex-1 flex-col mt-8">
             {/* Small Cards Top Row */}
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex-grow">
                 <BalanceCard
                   title="Total Balance"
@@ -31,7 +31,7 @@ export default function Overview() {
               </div>
             </div>
             {/* Small Cards Bottom Row */}
-            <div className="flex gap-3 mt-6">
+            <div className="flex flex-col sm:flex-row gap-3 mt-6">
               <div className="flex-grow">
                 <BalanceCard
                   title="V Stable Coin"
