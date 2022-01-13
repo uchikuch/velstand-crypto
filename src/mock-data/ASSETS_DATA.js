@@ -7,8 +7,8 @@ export const ASSETS_DATA = [
   {
     id: "1",
     image: velstandToken,
-    name: "Token",
-    code: "TKN",
+    name: "Velstand",
+    code: "VTD",
     difference: "+18.23%",
     price: "$44.12",
     volume: "$32.32M",
@@ -37,8 +37,8 @@ export const ASSETS_DATA = [
   {
     id: "4",
     image: token,
-    name: "Placeholder",
-    code: "PHD",
+    name: "Token",
+    code: "TKN",
     difference: "+3.78%",
     price: "$50.34",
     volume: "$28.43M",
