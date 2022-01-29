@@ -12,45 +12,43 @@ import Signup from "./components/Authentication/Signup";
 function App() {
   return (
     <Router>
-      <Auth>
-        <Routes>
-          <Route exact path="/" element={<Velstand />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route
-            path="/dashboard"
-            element={
-              <SimpleDashboardLayout>
-                <Overview />
-              </SimpleDashboardLayout>
-            }
-          />
-          <Route
-            path="/dashboard/balance"
-            element={
-              <SimpleDashboardLayout>
-                <Balance />
-              </SimpleDashboardLayout>
-            }
-          />
-          <Route
-            path="/dashboard/convert"
-            element={
-              <SimpleDashboardLayout>
-                <Convert />
-              </SimpleDashboardLayout>
-            }
-          />
-          <Route
-            path="/dashboard/settings"
-            element={
-              <SimpleDashboardLayout>
-                <Settings />
-              </SimpleDashboardLayout>
-            }
-          />
-        </Routes>
-      </Auth>
+      <Routes>
+        <Route exact path="/" element={<Velstand />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/signup" element={<Signup />} />
+        <Route
+          path="/dashboard"
+          element={
+            <SimpleDashboardLayout>
+              <Overview />
+            </SimpleDashboardLayout>
+          }
+        />
+        <Route
+          path="/dashboard/balance"
+          element={
+            <SimpleDashboardLayout>
+              <Balance />
+            </SimpleDashboardLayout>
+          }
+        />
+        <Route
+          path="/dashboard/convert"
+          element={
+            <SimpleDashboardLayout>
+              <Convert />
+            </SimpleDashboardLayout>
+          }
+        />
+        <Route
+          path="/dashboard/settings"
+          element={
+            <SimpleDashboardLayout>
+              <Settings />
+            </SimpleDashboardLayout>
+          }
+        />
+      </Routes>
     </Router>
   );
 }

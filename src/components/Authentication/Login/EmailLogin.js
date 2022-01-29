@@ -42,34 +42,7 @@ export default function EmailLogin() {
         })}
         onSubmit={async (values) => {
           try {
-            setEmailError("");
-            setPasswordError("");
-            const res = await fetch(
-              `${process.env.REACT_APP_SERVER_URL}/login`,
-              {
-                method: "POST",
-                body: JSON.stringify(values),
-                headers: { "Content-Type": "application/json" },
-              }
-            );
-            const data = await res.json();
-            if (data.errors) {
-              if (data.errors.email) {
-                setEmailError(data.errors.email);
-              }
-              if (data.errors.password) {
-                setPasswordError(data.errors.password);
-              }
-            }
-            if (data.user) {
-              localStorage.setItem("topset_jwt", data.jwt);
-              dispatch({
-                type: "SET_USER",
-                user: data.user,
-              });
-              navigate("/dashboard");
-              //window.location.reload();
-            }
+            navigate("/dashboard");
           } catch (error) {
             console.log("caught error: ", error);
           }
